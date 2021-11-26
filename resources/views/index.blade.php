@@ -9,9 +9,9 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="banner-caption">
                         <div class="line-dec"></div>
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+                        <h2>Easy Access to Jobs </h2>
                         <div class="blue-button">
-                            <a href="contact.html">Contact Us</a>
+                            <a href="{{route('contact-page')}}">Contact Us</a>
                         </div>
                     </div>
                 </div>
