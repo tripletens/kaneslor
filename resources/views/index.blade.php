@@ -32,12 +32,12 @@
                 <div class="inner">
                       <div class="section-heading">
                           <span>Contact Us</span>
-                          <h2>Vivamus nec vehicula felis</h2>
+                          <h2>Let get in touch</h2>
                       </div>
                       <!-- Modal button -->
 
                       <div class="blue-button">
-                        <a href="contact.html">Talk to us</a>
+                        <a href="{{route('contact-page')}}">Talk to us</a>
                       </div>
                 </div>
             </div>
