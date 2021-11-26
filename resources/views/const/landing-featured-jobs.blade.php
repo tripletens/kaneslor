@@ -14,7 +14,7 @@
                         <div class="featured-item">
                             <div class="thumb">
                                 <div class="thumb-img">
-                                    <img src="img/product-1-720x480.jpg" alt="">
+                                    <img src="{{asset('img/product-1-720x480.jpg')}}" alt="">
                                 </div>
 
                                 <div class="overlay-content">
@@ -25,14 +25,14 @@
                             </div>
 
                             <div class="down-content">
-                                <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                                <h4>Job Title</h4>
 
                                 <p> Medical / Health Jobs</p>
 
-                                <p><span><strong><sup>$</sup>60 000</strong></span></p>
+                                <p><span><strong><sup>&#8358;</sup>60 000</strong></span></p>
 
                                 <div class="text-button">
-                                    <a href="job-details.html">View More</a>
+                                    <a href="#">View More</a>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
                         <div class="featured-item">
                             <div class="thumb">
                                 <div class="thumb-img">
-                                    <img src="img/product-2-720x480.jpg" alt="">
+                                    <img src="{{asset('img/product-2-720x480.jpg')}}" alt="">
                                 </div>
 
                                 <div class="overlay-content">
@@ -53,14 +53,14 @@
                             </div>
                             
                             <div class="down-content">
-                                <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                                <h4>Job Title</h4>
 
                                 <p> Medical / Health Jobs</p>
 
-                                <p><span><strong><sup>$</sup>60 000</strong></span></p>
+                                <p><span><strong><sup>&#8358;</sup>60 000</strong></span></p>
 
                                 <div class="text-button">
-                                    <a href="job-details.html">View More</a>
+                                    <a href="#">View More</a>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                         <div class="featured-item">
                             <div class="thumb">
                                 <div class="thumb-img">
-                                    <img src="img/product-3-720x480.jpg" alt="">
+                                    <img src="{{asset('img/product-3-720x480.jpg')}}" alt="">
                                 </div>
 
                                 <div class="overlay-content">
@@ -81,14 +81,14 @@
                             </div>
                             
                             <div class="down-content">
-                                <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                                <h4>Job Title</h4>
 
                                 <p> Medical / Health Jobs</p>
 
-                                <p><span><strong><sup>$</sup>60 000</strong></span></p>
+                                <p><span><strong><sup>&#8358;</sup>60 000</strong></span></p>
 
                                 <div class="text-button">
-                                    <a href="job-details.html">View More</a>
+                                    <a href="#">View More</a>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                         <div class="featured-item">
                             <div class="thumb">
                                 <div class="thumb-img">
-                                    <img src="img/product-4-720x480.jpg" alt="">
+                                    <img src="{{asset('img/product-4-720x480.jpg')}}" alt="">
                                 </div>
 
                                 <div class="overlay-content">
@@ -109,14 +109,14 @@
                             </div>
 
                             <div class="down-content">
-                                <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                                <h4>Job Title</h4>
 
                                 <p> Medical / Health Jobs</p>
 
-                                <p><span><strong><sup>$</sup>60 000</strong></span></p>
+                                <p><span><strong><sup>&#8358;</sup>60 000</strong></span></p>
 
                                 <div class="text-button">
-                                    <a href="job-details.html">View More</a>
+                                    <a href="#">View More</a>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
                         <div class="featured-item">
                             <div class="thumb">
                                 <div class="thumb-img">
-                                    <img src="img/product-5-720x480.jpg" alt="">
+                                    <img src="{{asset('img/product-5-720x480.jpg')}}" alt="">
                                 </div>
 
                                 <div class="overlay-content">
@@ -137,14 +137,14 @@
                             </div>
                             
                             <div class="down-content">
-                                <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                                <h4>Job Title</h4>
 
                                 <p> Medical / Health Jobs</p>
 
-                                <p><span><strong><sup>$</sup>60 000</strong></span></p>
+                                <p><span><strong><sup>&#8358;</sup>60 000</strong></span></p>
 
                                 <div class="text-button">
-                                    <a href="job-details.html">View More</a>
+                                    <a href="#">View More</a>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +154,7 @@
                         <div class="featured-item">
                             <div class="thumb">
                                 <div class="thumb-img">
-                                    <img src="img/product-6-720x480.jpg" alt="">
+                                    <img src="{{asset('img/product-6-720x480.jpg')}}" alt="">
                                 </div>
 
                                 <div class="overlay-content">
@@ -165,14 +165,14 @@
                             </div>
                             
                             <div class="down-content">
-                                <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                                <h4>Job Title</h4>
 
                                 <p> Medical / Health Jobs</p>
 
-                                <p><span><strong><sup>$</sup>60 000</strong></span></p>
+                                <p><span><strong><sup>&#8358;</sup>60 000</strong></span></p>
 
                                 <div class="text-button">
-                                    <a href="job-details.html">View More</a>
+                                    <a href="#">View More</a>
                                 </div>
                             </div>
                         </div>
