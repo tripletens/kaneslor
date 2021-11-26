@@ -1,0 +1,430 @@
+
+/* @font-face {
+    font-family: 'Amagro';
+    src:url('../fonts/Amagro.ttf') format('truetype');
+  }   */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    max-width:100%;
+}
+
+#footer{
+    background-color: #1e7c34;
+    color: #ffffff;
+}
+#footer a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.carousel_div_one{
+    font-size: 48px !important;
+    font-weight: 600;
+    line-height: 139.4%;
+    height: 500px;
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../images/nature.jpg');
+    background-size:cover;
+}
+
+.carousel_div_two{
+    font-size: 48px !important;
+    font-weight: 600;
+    line-height: 139.4%;
+    height: 500px;
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../images/pests.jpg');
+    background-size:cover;
+}
+
+.carousel_div_three{
+    font-size: 48px !important;
+    font-weight: 600;
+    line-height: 139.4%;
+    height: 500px;
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../images/drainage.jpg');
+    background-size:cover;
+}
+
+.carousel_text{
+    color:#fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: auto; 
+    font-size:50px;
+    margin-top:5vh;
+}
+
+
+.services-item{
+    background-color:#1e7c34;
+    color:#ffffff;
+    padding:10px;
+    text-align:center;
+    margin-top: 15px;
+    box-shadow: #000;
+}
+
+.services-item:hover{
+    background-color:#ffffff;
+    color:#1e7c34;
+    padding:10px;
+    text-align:center;
+    margin-top: 10px;
+    box-shadow: #000 5px;
+    border: 2px #1e7c34 solid;
+    margin: 20px;
+    cursor: grab;
+    transition: all 0.5s 0s ease;
+    list-style-type: none;
+}
+
+.about_img{
+    height:300px;
+    width:300px;
+    margin:0 auto;
+    display:flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+/* .partners{
+    background-color: #1e7c34;
+    width: 80%;
+    margin: 0 auto;
+    display:flex;
+    align-self: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding:20px;
+    flex-direction: row;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    overflow-x:hidden;
+} */
+
+.partner-img{
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    display:flex;
+    margin:0 auto;
+    justify-content:center;
+}
+
+.partner_carousel_item{
+    margin:20px;
+}
+
+.section-div{
+    height:100%;
+    /* background-color:#E5E5E5; */
+    width:auto;
+    margin-left:10%;
+    margin-right:10%;
+    margin-bottom:50px;
+    border-radius:20px;
+    padding:10px;
+}
+
+.section-title{
+    color:#1e7c34;
+    padding:10px;
+    margin-bottom:30px;
+
+    text-transform: uppercase;
+}
+/* .section-item{
+    height:auto;
+    background-color:#1e7c34;
+    width:42%;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:20px;
+    color:#ffffff;
+    padding:20px;
+} */
+
+
+.section-item{
+    height:100%;
+    /* background-color:#1e7c34; */
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:20px;
+    color:#ffffff;
+    padding:20px;
+}
+
+.section-inner-item-one{
+    height:320px; 
+    margin-bottom:30px;
+    border-radius:20px;
+    color:#fff;
+    background-color:#1e7c34;
+    box-shadow:0px;
+}
+
+.section-inner-item-two{
+    height:320px; 
+    margin-bottom:30px;
+    border-radius:20px;
+    color:#fff;
+    background-color:#1e7c34;
+}
+
+/* .details_one{
+    display:none;
+} */
+.section-inner-item-one:hover{
+    height:320px; 
+    margin-bottom:30px;
+    border-radius:20px;
+    color:#1e7c34;
+    background-color:#ffffff;
+    transition:all 0.2s;
+}
+
+.section-inner-item-two:hover{
+    height:320px; 
+    margin-bottom:30px;
+    border-radius:20px;
+    color:#1e7c34;
+    background-color:#ffffff;
+    transition:all 0.2s;
+}
+
+.all_services_btn{
+    color:#1e7c34; 
+    border-radius:20px;
+    background-color:#ffffff;
+}
+
+.all_services_btn:hover{
+    color:#ffffff; 
+    border-radius:20px;
+    background-color:#1e7c34;
+    transition:all 0.2s;
+}
+
+.team-image{
+    width: auto;
+    height:500px;
+    background-image:url('../images/team.jpg');
+    background-size:cover;
+}
+
+.team-lead-title{
+
+    margin-top:50px;
+    color:#1e7c34;
+    padding:10px;
+    text-transform: uppercase;
+}
+
+.team-leader{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.team-leader-div{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.partner-title{
+    /* margin-top:50px; */
+    color:#1e7c34;
+    padding:auto;
+    text-transform: uppercase;
+}
+
+.partner-card{
+    border-radius:20px;
+}
+
+.nav_stuff:hover{
+    /* text-decoration:underline; */
+    color:#1e7c34;
+    transition:all 0.2s;
+}
+
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .section-item{
+        height:auto;
+        /* background-color:#1e7c34; */
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+        border-radius:20px;
+        color:#ffffff;
+        padding:20px;
+        display:flex;
+        flex-direction:column;
+    }
+    .section-inner-item-one{
+        height:auto; 
+        margin-bottom:30px;
+        border-radius:20px;
+        color:#fff;
+        background-color:#1e7c34;
+    }
+    
+    .section-inner-item-two{
+        height:auto; 
+        margin-bottom:30px;
+        border-radius:20px;
+        color:#fff;
+        background-color:#1e7c34;
+    }
+
+    .section-inner-item-one:hover{
+        height:auto; 
+        margin-bottom:30px;
+        border-radius:20px;
+        color:#1e7c34;
+        background-color:#ffffff;
+        transition:all 0.2s;
+    }
+    
+    .section-inner-item-two:hover{
+        height:auto; 
+        margin-bottom:30px;
+        border-radius:20px;
+        color:#1e7c34;
+        background-color:#ffffff;
+        transition:all 0.2s;
+    }
+
+    .team-leader-div{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+    .team-leader{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    
+}
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    
+}
+
+/* about page */
+
+.hero-page{
+    height:60vh;
+    background-image:url('../images/drainage.jpg');
+    background-size:cover;
+    color:#fff;
+}
+.about-image{
+    height:300px;
+    width:300px;
+    margin-left:100px;
+    margin-top:50px;
+    padding:50px;
+    border-radius:20px;
+   
+    background-image:url('../images/michashow_logo.jpeg');
+    background-size:100% 100%;
+}
+
+.about-image:hover{
+    /* border:1px solid #1e7c34; */
+    box-shadow: 20px #1e7c34 ;
+    transition:border 0.5s, box-shadow 0.5;
+}
+
+.about-text{
+    line-height:30px;
+    margin:50px;
+}
+
+.believe-div{
+    height:auto;
+    background-color:#72c987;
+    padding:50px;
+    font-family: 'Montserrat', sans-serif;
+}
+.believe-header{
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+}
+.about-text-card{
+    font-family: 'Montserrat', sans-serif;
+    padding:50px;
+    color:#1e7c34;
+    text-transform:uppercase;
+    font-size:20px;
+    line-height:40px;
+    height:230px;
+    padding-top:5vh;
+    margin:20px;
+}
+
+.hero-page-services{
+    height:60vh;
+    background-image:url('../images/pests.jpg');
+    background-size:cover;
+    color:#fff;
+}
+
+.what-we-do-div{
+    height:auto;
+    background-color:#ffffff;
+    padding:50px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom:50px;
+}
+
+.what-we-do-header{
+    color:#1e7c34;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.services-text-card{
+    font-family: 'Montserrat', sans-serif;
+    padding-left:20px;
+    padding-right:20px;
+    color:#1e7c34;
+    text-transform:uppercase;
+    font-size:20px;
+    line-height:40px;
+    height:100%;
+    margin:20px;
+}
+
+.services-text-card-text{
+    font-size:14px;
+    line-height:40px;
+    text-transform:Capitalize;
+    text-align:justify;
+}
+
+.hero-page-team{
+    height:60vh;
+    background-image:url('../images/team.jpg');
+    background-size:cover;
+    color:#fff;
+}
+
+.hero-page-gallery{
+    height:60vh;
+    background-image:url('../images/nature.jpg');
+    background-size:cover;
+    color:#fff;
+}
