@@ -4,7 +4,7 @@
                     <div class="col-md-12">
                         <div class="section-heading">
                             <span>Latest blog posts</span>
-                            <h2>Lorem ipsum dolor sit amet ctetur.</h2>
+                            <h2>We have some gists for you</h2>
                         </div>
                     </div> 
                 </div> 
@@ -13,7 +13,7 @@
                         <div class="featured-item">
                             <div class="thumb">
                                 <div class="thumb-img">
-                                    <img src="img/blog-1-720x480.jpg" alt="">
+                                    <img src="{{asset('img/blog-1-720x480.jpg')}}" alt="">
                                 </div>
 
                                 <div class="overlay-content">
@@ -29,7 +29,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim consectetur assumenda nam facere voluptatibus totam veritatis. </p>
 
                                 <div class="text-button">
-                                    <a href="blog-details.html">Read More</a>
+                                    <a href="{{route('blog-page')}}">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                         <div class="featured-item">
                             <div class="thumb">
                                 <div class="thumb-img">
-                                    <img src="img/blog-2-720x480.jpg" alt="">
+                                    <img src="{{asset('img/blog-2-720x480.jpg')}}" alt="">
                                 </div>
 
                                 <div class="overlay-content">
@@ -55,7 +55,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim consectetur assumenda nam facere voluptatibus totam veritatis. </p>
 
                                 <div class="text-button">
-                                    <a href="blog-details.html">Read More</a>
+                                    <a href="{{route('blog-page')}}">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                         <div class="featured-item">
                             <div class="thumb">
                                 <div class="thumb-img">
-                                    <img src="img/blog-3-720x480.jpg" alt="">
+                                    <img src="{{asset('img/blog-3-720x480.jpg')}}" alt="">
                                 </div>
 
                                 <div class="overlay-content">
@@ -81,7 +81,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim consectetur assumenda nam facere voluptatibus totam veritatis. </p>
 
                                 <div class="text-button">
-                                    <a href="blog-details.html">Read More</a>
+                                    <a href="{{route('blog-page')}}">Read More</a>
                                 </div>
                             </div>
                         </div>
