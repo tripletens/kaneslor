@@ -4,7 +4,7 @@
                     <div class="col-md-12">
                         <div class="section-heading">
                             <span>Featured Jobs</span>
-                            <h2>Lorem ipsum dolor sit amet ctetur.</h2>
+                            <h2>We have jobs suitable for you</h2>
                         </div>
                     </div> 
                 </div> 

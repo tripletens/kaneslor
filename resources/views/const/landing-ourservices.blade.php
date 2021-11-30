@@ -48,7 +48,7 @@
                             <p>We prepare Nigerian graduates to be better equipped to land good jobs, we help them source for meaningful jobs and orientate them to perform excellently well on the job.
                             <br/>
                                 We also help relocate them when a job is not the right fit for them</p>
-                            <br/>
+                            <!-- <br/> -->
                             <h5>HOW IT WORKS FOR EMPLOYERS</h5>
                             <ul type="solid">
                                 <li class="m-3"> STEP ONE - Download the Kanselor app</li><br>
