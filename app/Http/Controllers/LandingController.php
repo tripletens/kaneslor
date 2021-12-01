@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Jobs;
 
 class LandingController extends Controller
 {
@@ -10,7 +11,12 @@ class LandingController extends Controller
     public function index()
     {
         //
-        return view('index');
+        $featured_jobs = Jobs::orderBy('id','desc')->limit(3)->get();
+        $data = [
+            'jobs' => $featured_jobs
+        ];
+        // dd($featured_jobs);
+        return view('index')->with($data);
     }
 
     public function about()

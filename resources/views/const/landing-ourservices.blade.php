@@ -22,8 +22,8 @@
                 <hr/>
                 <h2 class="text-center my-7"> Our Services </h2> <br/><br/>
                 <div class="row d-flex justify-content-center my-5" >
-                    <div class="col-md-6">
-                        <div class="card" style=" height:90vh;padding:20px;border-radius:5px;box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);-webkit-box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);-moz-box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);">
+                    <div class="col-md-6 ">
+                        <div class="card my-5" style=" height:100vh;padding:20px;border-radius:5px;box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);-webkit-box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);-moz-box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);">
                             
                             <h3 class="text-center"> KANSELOR FOR EMPLOYERS </h3>
                             <p>We help Nigerian employers sources very good hands. Then prepare these staff to deliver excellent results in the job. We also help the fire underperforming staffs</p>
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="card shadow" style="height:90vh;padding:20px;border-radius:5px;box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);-webkit-box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);-moz-box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);">
+                        <div class="card shadow" style="height:100vh;padding:20px;border-radius:5px;box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);-webkit-box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);-moz-box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);">
                             
                             <h3 class="text-center"> KANSELOR FOR NIGERIAN JOB SEEKERS </h3>
                             <p>We prepare Nigerian graduates to be better equipped to land good jobs, we help them source for meaningful jobs and orientate them to perform excellently well on the job.
@@ -72,7 +72,7 @@
             <div class="container">
                 <div class="row d-flex justify-content-center my-5" >
                     <div class="col-md-12">
-                        <div class="card shadow" style="height:50vh;padding:20px;border-radius:5px;box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);-webkit-box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);-moz-box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);">
+                        <div class="card shadow" style="height:auto;padding:20px;border-radius:5px;box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);-webkit-box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);-moz-box-shadow: 2px 2px 8px 0px rgba(128,128,128,0.75);">
                             <h3 class="text-center" style="margin:10vh;margin-bottom:20px;">THE KANSELOR BUSINESS MASTERCLASS</h3>
                             <p class="text-center" style="font-size:20px;margin:10vh; margin-top:0px;">This is a weekly Business and Work improvement classes designed to 10X the current results and income you are generating.
                                 <!-- <br/> -->
