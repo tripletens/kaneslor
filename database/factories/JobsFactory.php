@@ -6,7 +6,6 @@ use App\Models\Jobs;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-
 class JobsFactory extends Factory
 {
     /**
