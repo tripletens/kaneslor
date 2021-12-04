@@ -10,8 +10,23 @@
                     <div class="banner-caption">
                         <div class="line-dec"></div>
                         <h2>Easy Access to Jobs </h2>
-                        <div class="blue-button">
-                            <a href="{{route('contact-page')}}">Contact Us</a>
+                        <div class="row" style="width:50%;">
+                            <div class="col-md-6">
+                                <div class="blue-button">
+                                    <a href="{{route('register')}}">Register as an Employer</a>
+                                </div> 
+                            </div>
+                            <div class="col-md-6">
+                                <div class="blue-button">
+                                    <a href="{{route('register')}}">Register as an Applicant</a>
+                                </div> 
+                            </div>
+                            <!-- <div class="blue-button">
+                                <a href="{{route('contact-page')}}">Register as an Employer</a>
+                            </div> -->
+                            <!-- <div class="blue-button">
+                                <a href="{{route('contact-page')}}">Register as an Applicant </a>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -22,9 +37,51 @@
     <main>
         @include('const.landing-ourservices')
 
-        @include('const.landing-featured-jobs')
+        <section class="featured-places">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <span>Why Choose us</span>
+                            <h2> We Provide Jobs to over 200 million Nigerians</h2>
+                        </div>
+                    </div> 
+                </div> 
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="featured-item">
+                            <div class="down-content">
 
-        @include('const.landing-blog-posts')
+                                <h3 class="text-center">Employers </h3>
+
+                                <p class="text-center">As an Employer we provide the link to job applicants on the go</p>
+
+                                <div class="blue-button" style="margin-bottom:10px;display:flex; flex-direction:row; align:center;justify-content:center;">
+                                    <a href="{{route('register')}}">Get Started</a>
+                                </div>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="featured-item">
+
+                            <div class="down-content">
+                                <h3 class="text-center my-3">Job Seeker</h3>
+
+                                <p class="text-center">We make it easier to get jobs that suits you</p>
+
+                                <div class="blue-button" style="margin-bottom:10px;display:flex; flex-direction:row; align:center;justify-content:center;">
+                                    <a href="{{route('register')}}">Get Started</a>
+                                </div>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="video-container">
             <div class="video-overlay"></div>
@@ -44,5 +101,6 @@
         </section>
 
         @include('const.landing-testimonials')
+        @include('const.landing-blog-posts')
     </main>
 @endsection

@@ -26,7 +26,7 @@
                             </div>
                         </div>
 
-                        <div class="down-content my-5">
+                        <div class="down-content ">
                             <h4>{{$job->title}}</h4>
 
                             <p> {{Str::limit($job->description,30)}}</p>
