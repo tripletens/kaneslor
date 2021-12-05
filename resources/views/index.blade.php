@@ -52,7 +52,7 @@
                         <div class="featured-item">
                             <div class="down-content">
 
-                                <h3 class="text-center">Employers </h3>
+                                <h3 class="text-center my-3 mx-5">Employers </h3>
 
                                 <p class="text-center">As an Employer we provide the link to job applicants on the go</p>
 

@@ -41,15 +41,14 @@
             </div>
         </div>
         <!-- <h2 class="text-center my-7"> Our Services </h2> <br /><br /> -->
-        <div class="row d-flex justify-content-center my-5">
+        <!-- <div class="row d-flex justify-content-center my-5">
             <div class="col-md-6 ">
 
             </div>
             <div class="col-md-6">
 
             </div>
-        </div>
-
+        </div> -->
     </div>
 </section>
 <!-- 
@@ -61,9 +60,9 @@
                             <h3 class="text-center" style="margin:10vh;margin-bottom:20px;">THE KANSELOR BUSINESS MASTERCLASS</h3>
                             <p class="text-center" style="font-size:20px;margin:10vh; margin-top:0px;">This is a weekly Business and Work improvement classes designed to 10X the current results and income you are generating.
                                 <br/>
-<!-- It's a practical hands-on session that equip both the job seeker and business owners with business improvement skills</p> -->
+ It's a practical hands-on session that equip both the job seeker and business owners with business improvement skills</p> -->
 </div>
 </div>
 </div>
 </div>
-</section> -->
+</section> 
