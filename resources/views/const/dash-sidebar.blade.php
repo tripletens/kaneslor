@@ -24,41 +24,36 @@
 
 <!-- Heading -->
 <div class="sidebar-heading">
-    Our Courses 
+    Applications
 </div>
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Courses"
         aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-fw fa-cog"></i>
-        <span>  Classes</span>
+        <i class="fas fa-fw fa-book"></i>
+        <span>  Job Applications</span>
     </a>
     <div id="Courses" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <!-- <h6 class="collapse-header">Custom Components:</h6> -->
-            <!-- <a class="collapse-item" href="#">Make Payment </a> -->
-            <a class="collapse-item" href="{{route('view-courses')}}">View Courses</a>
+            <a class="collapse-item" href="{{route('apply-jobs')}}">Apply </a>
+            <a class="collapse-item" href="{{route('view-applications')}}">View Job applications</a>
         </div>
     </div>
 </li>
 
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#payments"
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#interviews"
         aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-fw fa-cog"></i>
-        <span>  Payments</span>
+        <i class="fas fa-fw fa-book"></i>
+        <span>  Interviews </span>
     </a>
-    <div id="payments" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+    <div id="interviews" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <!-- <h6 class="collapse-header">Custom Components:</h6> -->
-            @can('isAdmin')
-                <a class="collapse-item" href="{{route('all_user_payments')}}">View all Payments</a>
-            @elsecan('isStaff')
-
-            @else 
-                <a class="collapse-item" href="{{route('my_payments')}}">View My Payments</a>
-            @endcan
+            <a class="collapse-item" href="#">View </a>
+            <!-- <a class="collapse-item" href="#">View Job applications</a> -->
         </div>
     </div>
 </li>

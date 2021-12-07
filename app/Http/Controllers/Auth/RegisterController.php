@@ -41,6 +41,15 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    public function showRegisterForm()
+    {
+        return view('auth.register',[
+            'title' => 'Register',
+            'loginRoute' => 'register',
+            'forgotPasswordRoute' => 'password.request',
+        ]);
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *

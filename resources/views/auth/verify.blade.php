@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+<!-- @section('content') -->
 <!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -25,7 +25,7 @@
         </div>
     </div>
 </div> -->
-@extends('layouts.auth')
+<!-- @extends('layouts.auth') -->
 
 @section('content')
 
@@ -39,7 +39,7 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">__('Verify Your Email Address') }}</h1>
+                                <h1 class="h4 text-gray-900 mb-4">{{__('Verify Your Email Address') }}</h1>
                             </div>
                             @if (session('resent'))
                                 <div class="alert alert-success" role="alert">
@@ -48,7 +48,7 @@
                             @endif
                             {{ __('Before proceeding, please check your email for a verification link.') }}
                             {{ __('If you did not receive the email') }},
-                            <form class="user" method="POST" action="{{ route('verification.resend') }}">
+                            <form class="user" method="GET" action="{{ route($resendRoute) }}">
                                 @csrf
                                 <input class="btn btn-success btn-user btn-block" type="submit" value="{{ __('click here to request another') }}"/>
                                 
@@ -69,6 +69,5 @@
         </div>
 
     </div>
-@endsection
 
 @endsection

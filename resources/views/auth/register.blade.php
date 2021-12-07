@@ -51,20 +51,7 @@
                                             id="exampleRepeatPassword" placeholder="Repeat Password">
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-12 mb-3 mb-sm-0">
-                                        <select name="rank" style="color:green;" class="form-control form-control-user" placeholder="What are u registering as?">
-                                            <option name="rank[]" > -- Select a level -- </option>
-                                            <option name="rank[]" value="job_seeker"> Job Seeker</option>
-                                            <option name="rank[]" value="employer"> Employer </option>
-                                        </select>
-                                            @error('rank')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                    </div>
-                                </div>
+                                
                                 <input class="btn btn-success btn-user btn-block" type="submit" value="Register Account"/>
                                 <!-- <a href="" class="btn btn-success btn-user btn-block">
                                     Register Account

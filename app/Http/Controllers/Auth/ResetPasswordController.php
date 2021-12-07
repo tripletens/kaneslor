@@ -21,6 +21,14 @@ class ResetPasswordController extends Controller
 
     use ResetsPasswords;
 
+    public function showResetForm(Request $request, $token = null){
+        return view('auth.passwords.reset',[
+            'title' => 'Reset Password',
+            'passwordUpdateRoute' => 'password.update',
+            'token' => $token,
+        ]);
+    }
+
     /**
      * Where to redirect users after resetting their password.
      *
