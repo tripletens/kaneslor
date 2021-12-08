@@ -64,7 +64,7 @@
                             </tr>
                             @endforeach
                             @else
-                            <span class="text-center alert alert-info"> Sorry No applications available <a href="{{route('pply-jobs')}}" class="btn btn-link">apply here</a></span>
+                            <span class="text-center alert alert-info"> Sorry No applications available <a href="{{route('apply-jobs')}}" class="btn btn-link">apply here</a></span>
                             @endif
 
                         </tbody>
