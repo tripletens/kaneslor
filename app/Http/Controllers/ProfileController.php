@@ -24,9 +24,49 @@ class ProfileController extends Controller
 
         $user_id = Auth()->user()->id;
 
-        $path = Storage::get('json/states.json');
+        // $path = Storage::get('json/states.json');
 
-        $states_json = json_decode($path, true); 
+        $states = [
+            "NG-AB" => "Abia",
+            "NG-AD" => "Adamawa",
+            "NG-AK" => "Akwa Ibom",
+            "NG-AN" => "Anambra",
+            "NG-BA" => "Bauchi",
+            "NG-BY" => "Bayelsa",
+            "NG-BE" => "Benue",
+            "NG-BO" => "Borno",
+            "NG-CR" => "Cross River",
+            "NG-DE" => "Delta",
+            "NG-EB" => "Ebonyi",
+            "NG-ED" => "Edo",
+            "NG-EK" => "Ekiti",
+            "NG-EN" => "Enugu",
+            "NG-FC" => "FCT - Abuja",
+            "NG-GO" => "Gombe",
+            "NG-IM" => "Imo",
+            "NG-JI" => "Jigawa",
+            "NG-KD" => "Kaduna",
+            "NG-KN" => "Kano",
+            "NG-KT" => "Katsina",
+            "NG-KE" => "Kebbi",
+            "NG-KO" => "Kogi",
+            "NG-KW" => "Kwara",
+            "NG-LA" => "Lagos",
+            "NG-NA" => "Nasarawa",
+            "NG-NI" => "Niger",
+            "NG-OG" => "Ogun",
+            "NG-ON" => "Ondo",
+            "NG-OS" => "Osun",
+            "NG-OY" => "Oyo",
+            "NG-PL" => "Plateau",
+            "NG-RI" => "Rivers",
+            "NG-SO" => "Sokoto",
+            "NG-TA" => "Taraba",
+            "NG-YO" => "Yobe",
+            "NG-ZA" => "Zamfara"
+        ];
+
+        // $states_json = json_decode($path, true); 
 
         // dd($states_json);
 
@@ -39,7 +79,7 @@ class ProfileController extends Controller
 
         $data = [
             'user' => $user_details,
-            'states' => $states_json
+            'states' => $states
         ];
         return view('dashboard.profile.view-profile')->with($data);
     }
