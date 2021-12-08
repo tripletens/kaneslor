@@ -14,6 +14,7 @@
         <div class="col-md-12 col-xs-12 col-lg-12">
             <div class="card">
                 <div class="card-body">
+                    @if(count($applications) > 0)
                     <table id="view_jobs" class="table table-responsive table-striped">
                         <thead>
                             <tr>
@@ -28,7 +29,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @if(count($applications) > 0)
+
                             @foreach($applications as $key => $application)
                             <tr>
                                 <td>{{$key+1}}</td>
@@ -63,12 +64,13 @@
                                 </th>
                             </tr>
                             @endforeach
-                            @else
-                            <span class="text-center alert alert-info"> Sorry No applications available <a href="{{route('apply-jobs')}}" class="btn btn-link">apply here</a></span>
-                            @endif
+
 
                         </tbody>
                     </table>
+                    @else
+                    <span class="text-center alert alert-info m-5"> Sorry No applications available <a href="{{route('apply-jobs')}}" class="btn btn-link">apply here</a></span>
+                    @endif
                 </div>
             </div>
         </div>
