@@ -79,7 +79,7 @@ class JobsController extends Controller
         $save_Details = $job_application->save();
 
         if($save_Details){
-            toastr()->success('Thanks for applying for a Job. Please task the assessment in view Applications');
+            toastr()->success('Thanks for applying for a Job. Please take the assessment in view Applications');
             return back();
         }else{
              toastr()->error("Sorry an Error Occured, Please try again later");
