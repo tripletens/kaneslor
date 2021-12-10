@@ -87,15 +87,24 @@
             <div class="video-overlay"></div>
             <div class="video-content">
                 <div class="inner">
-                      <div class="section-heading">
+                    <video width="320" height="240" controls>
+
+                        <source src="{{asset('video/video.mp4')}}" type="video/mp4">
+
+                        <source src="movie.ogg" type="video/ogg">
+
+                        Your browser does not support the video tag.
+
+                    </video>
+                      <!-- <div class="section-heading">
                           <span>Contact Us</span>
                           <h2>Let get in touch</h2>
-                      </div>
+                      </div> -->
                       <!-- Modal button -->
 
-                      <div class="blue-button">
+                      <!-- <div class="blue-button">
                         <a href="{{route('contact-page')}}">Talk to us</a>
-                      </div>
+                      </div> -->
                 </div>
             </div>
         </section>
