@@ -42,6 +42,7 @@ class VerificationController extends Controller
      */
     public function verify(Request $request)
     {
+        // echo "hello"; exit();
         if ($request->route('id') != $request->user('admin')->getKey()) {
             //id value doesn't match.
             return redirect()
