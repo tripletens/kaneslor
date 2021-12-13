@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Applications;
 use Illuminate\Support\Facades\Mail;
-use App\mail\JobApplicationRejected;
-use App\mail\JobApplicationAccepted;
+use App\Mail\JobApplicationRejected;
+use App\Mail\JobApplicationAccepted;
 
 class JobController extends Controller
 {
@@ -78,7 +78,7 @@ class JobController extends Controller
         $email = $job_application[0]->email;
 
         Mail::to($email)->send(new JobApplicationAccepted($data));
-        
+
         toastr()->success('An E-mail has been sent to the applicant via-' . $email);
         return back();
     }
