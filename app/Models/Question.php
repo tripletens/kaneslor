@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     use HasFactory;
+    public $fillable = ['title','description','user_id','category_id','status'];
 }

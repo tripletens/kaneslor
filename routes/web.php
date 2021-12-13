@@ -80,7 +80,24 @@ Route::prefix('/admin')->name('admin.')->namespace('App\Http\Controllers\Admin')
     Route::get('/dashboard','HomeController@index')->name('home')->middleware('guard.verified:admin,admin.verification.notice');
 
     //Put all of your admin routes here...
-
+    Route::prefix('/jobs')->middleware('guard.verified:admin,admin.verification.notice')->group(function () {
+        Route::get('/view','JobController@fetch_job_applications')->name('job_applications');
+        Route::get('/view/{code}','JobController@fetch_one_job_application')->name('one_job_application');
+        Route::post('/approve/{id}','JobController@approve')->name('approve_job_applications');
+        Route::post('/reject/{id}','JobController@reject')->name('reject_job_applications');
+    });
+    Route::prefix('/category')->middleware('guard.verified:admin,admin.verification.notice')->group(function () {
+        Route::get('/view','CategoryController@view_all')->name('view-category');
+        Route::post('/add','CategoryController@add_category')->name('add-category');
+        Route::post('/delete/{id}','CategoryController@delete_category')->name('delete-category');
+        Route::get('/view-test/{id}','CategoryController@view_test_page')->name('view-test-category');
+        Route::post('/update/{id}','CategoryController@update')->name('update-category');
+    });
+    Route::prefix('/question')->middleware('guard.verified:admin,admin.verification.notice')->group(function () {
+        Route::post('/add','questionController@store')->name('add-question');
+        Route::post('/update/{id}','questionController@update')->name('update-question');
+        Route::post('/delete/{id}','questionController@destroy')->name('delete-question');
+    });
 });
 
 Route::prefix('/employer')->name('employer.')->namespace('App\Http\Controllers\Employer')->group(function(){

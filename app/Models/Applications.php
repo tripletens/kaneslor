@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Applications extends Model
 {
     use HasFactory;
+    public $fillable = ['status'];
 }
