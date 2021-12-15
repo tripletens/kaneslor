@@ -86,6 +86,7 @@ Route::prefix('/admin')->name('admin.')->namespace('App\Http\Controllers\Admin')
         Route::post('/approve/{id}','JobController@approve')->name('approve_job_applications');
         Route::post('/reject/{id}','JobController@reject')->name('reject_job_applications');
     });
+    
     Route::prefix('/category')->middleware('guard.verified:admin,admin.verification.notice')->group(function () {
         Route::get('/view','CategoryController@view_all')->name('view-category');
         Route::post('/add','CategoryController@add_category')->name('add-category');
@@ -94,9 +95,9 @@ Route::prefix('/admin')->name('admin.')->namespace('App\Http\Controllers\Admin')
         Route::post('/update/{id}','CategoryController@update')->name('update-category');
     });
     Route::prefix('/question')->middleware('guard.verified:admin,admin.verification.notice')->group(function () {
-        Route::post('/add','questionController@store')->name('add-question');
-        Route::post('/update/{id}','questionController@update')->name('update-question');
-        Route::post('/delete/{id}','questionController@destroy')->name('delete-question');
+        Route::post('/add','QuestionController@store')->name('add-question');
+        Route::post('/update/{id}','QuestionController@update')->name('update-question');
+        Route::post('/delete/{id}','QuestionController@destroy')->name('delete-question');
     });
 });
 
