@@ -31,8 +31,9 @@ Route::prefix('dashboard')->group(function () {
         Route::post('/save-application', [App\Http\Controllers\JobsController::class, 'save_application'])->name('save-application');
         Route::get('/apply', [App\Http\Controllers\JobsController::class, 'apply_jobs_page'])->name('apply-jobs');
         // 
-
+        // fetch_job_test
         Route::get('/job-application/{code}', [App\Http\Controllers\JobsController::class, 'view_one_application'])->name('view-one-application');
+        Route::get('/view-test/{category_id}',[App\Http\Controllers\JobsController::class, 'fetch_job_test'])->name('view_job_tests');
     });
 
     Route::prefix('users')->group(function () {
@@ -85,8 +86,9 @@ Route::prefix('/admin')->name('admin.')->namespace('App\Http\Controllers\Admin')
         Route::get('/view/{code}','JobController@fetch_one_job_application')->name('one_job_application');
         Route::post('/approve/{id}','JobController@approve')->name('approve_job_applications');
         Route::post('/reject/{id}','JobController@reject')->name('reject_job_applications');
+        
     });
-    
+
     Route::prefix('/category')->middleware('guard.verified:admin,admin.verification.notice')->group(function () {
         Route::get('/view','CategoryController@view_all')->name('view-category');
         Route::post('/add','CategoryController@add_category')->name('add-category');

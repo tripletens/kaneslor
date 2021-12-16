@@ -29,7 +29,6 @@
                             </tr>
                         </thead>
                         <tbody>
-
                             @foreach($applications as $key => $application)
                             <tr>
                                 <td>{{$key+1}}</td>
@@ -55,7 +54,7 @@
                                                 </svg>
                                             </button>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{route('view_job_tests', $application->category)}}">
                                             <button type="button" class="btn btn-sm btn-primary mx-2">View Test</button>
                                         </a>
 

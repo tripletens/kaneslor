@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Applications;
 use App\Models\Category;
+use App\Models\Question;
 use Illuminate\Http\Request;
 use Laravel\Ui\Presets\React;
 use Illuminate\Support\Facades\Validator;
@@ -91,7 +92,7 @@ class JobsController extends Controller
         // get all the job applications 
         $user_id = Auth('web')->user()->id;
 
-        $get_jobs = DB::table('applications')->where('applications.user_id',$user_id)->join('categories', 'applications.id', '=', 'categories.id')
+        $get_jobs = DB::table('applications')->where('applications.user_id',$user_id)->join('categories', 'applications.category', '=', 'categories.id')
         ->select('applications.*', 'categories.name as category_name')->get();
 
         // echo dd($get_jobs); exit();
@@ -119,5 +120,15 @@ class JobsController extends Controller
         ];
 
         return view('dashboard.jobs.view-one')->with($data);
+    }
+
+    public function fetch_job_test($category_id){
+        $tests = Question::where('category_id',$category_id)->get();
+
+        $data = [
+            'tests' => $tests
+        ];
+
+        return view('dashboard.jobs.view-test')->with($data);
     }
 }
