@@ -21,8 +21,8 @@
             </div>
         </div> -->
         <div class="row">
-            <div class="col-md-7">
-                <div class="left-content">
+            <div class="col-md-7" style="background-image:url({{asset('images/kaneslor_icon.png')}}); background-size:50%;background-repeat: no-repeat;background-position: center;">
+                <div class="left-content" >
                     <br>
                     <h3>WELCOME TO KANSELOR VACANCY <br /> 
                     </h3>

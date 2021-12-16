@@ -26,8 +26,8 @@
                                     <img src="img/popular_item_1.jpg" alt="">
                                 </div>
                                 <div class="text-content">
-                                    <h4>John Doe</h4>
-                                    <span><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi atque cumque ab culpa provident itaque nemo ratione vitae incidunt voluptas, doloribus repellat saepe similique odit, fuga adipisci soluta repellendus modi."</em></span>
+                                    <h4>M.D Geneith Pharma limited</h4>
+                                    <span>"KiyiX has delivered the highest value to my company in recruitment"</span>
                                 </div>
                             </div>
                         </div>
@@ -40,8 +40,8 @@
                                     <img src="img/popular_item_2.jpg" alt="">
                                 </div>
                                 <div class="text-content">
-                                    <h4>John Doe</h4>
-                                    <span><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi atque cumque ab culpa provident itaque nemo ratione vitae incidunt voluptas, doloribus repellat saepe similique odit, fuga adipisci soluta repellendus modi."</em></span>
+                                    <h4>MD TRICARE LIMITED</h4>
+                                    <span>"My top five sales reps all came from KiyiX."</span>
                                 </div>
                             </div>
                         </div>
@@ -54,8 +54,8 @@
                                     <img src="img/popular_item_3.jpg" alt="">
                                 </div>
                                 <div class="text-content">
-                                    <h4>John Doe</h4>
-                                    <span><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi atque cumque ab culpa provident itaque nemo ratione vitae incidunt voluptas, doloribus repellat saepe similique odit, fuga adipisci soluta repellendus modi."</em></span>
+                                    <h4>MD Crosslink Group</h4>
+                                    <span>"KiyiX has been a dependable partner."</span>
                                 </div>
                             </div>
                         </div>
@@ -68,36 +68,8 @@
                                     <img src="img/popular_item_4.jpg" alt="">
                                 </div>
                                 <div class="text-content">
-                                    <h4>John Doe</h4>
-                                    <span><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi atque cumque ab culpa provident itaque nemo ratione vitae incidunt voluptas, doloribus repellat saepe similique odit, fuga adipisci soluta repellendus modi."</em></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="item popular-item">
-                            <div class="thumb">
-                                <div class="thumb-img">
-                                    <img src="img/popular_item_5.jpg" alt="">
-                                </div>
-                                <div class="text-content">
-                                    <h4>John Doe</h4>
-                                    <span><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi atque cumque ab culpa provident itaque nemo ratione vitae incidunt voluptas, doloribus repellat saepe similique odit, fuga adipisci soluta repellendus modi."</em></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="item popular-item">
-                            <div class="thumb">
-                                <div class="thumb-img">
-                                    <img src="img/popular_item_6.jpg" alt="">
-                                </div>
-                                <div class="text-content">
-                                    <h4>John Doe</h4>
-                                    <span><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi atque cumque ab culpa provident itaque nemo ratione vitae incidunt voluptas, doloribus repellat saepe similique odit, fuga adipisci soluta repellendus modi."</em></span>
+                                    <h4>PHARM JOSEPH ABU</h4>
+                                    <span>"KiyiX took me out of the job market"</span>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +78,7 @@
             </div>
         </section>
 
-        <section id="video-container">
+        <!-- <section id="video-container">
             <div class="video-overlay"></div>
             <div class="video-content">
                 <div class="inner">
@@ -114,7 +86,7 @@
                           <span>Lorem ipsum dolor.</span>
                           <h2>Vivamus nec vehicula felis</h2>
                       </div>
-                      <!-- Modal button -->
+                      Modal button
 
                       <div class="container">
                         <div class="row">
@@ -125,16 +97,16 @@
                       </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="popular-places">
             <div class="container text-center">
-                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+                <h4>We are open for business 24/7</h4>
 
                 <br>
 
                 <div class="blue-button">
-                    <a href="contact.html">Contact Us</a>
+                    <a href="{{route('contact-page')}}">Contact Us</a>
                 </div>
             </div>
         </section>
