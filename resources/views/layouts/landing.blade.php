@@ -41,7 +41,7 @@
     @include('const.footer')
 
     <div class="sub-footer">
-        <p>Copyright © 2020 Company Name - Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a></p>
+        <p>Copyright © <?php echo(date('Y'));?> {{env('APP_NAME')}} </p>
     </div>
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script> -->
