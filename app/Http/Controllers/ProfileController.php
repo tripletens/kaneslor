@@ -92,7 +92,6 @@ class ProfileController extends Controller
             'email' => 'required',
             'phone' => 'required|numeric',
             'gender' => 'required',
-            'profession' => 'required',
             'home_address' => 'required',
             'state' => 'required',
             'image' => 'required|mimes:jpg,jpeg,png|max:2048'
@@ -107,7 +106,6 @@ class ProfileController extends Controller
         $email = $request->input('email');
         $phone = $request->input('phone');
         $gender = $request->input('gender');
-        $profession = $request->input('profession');
         $home_address = $request->input('home_address');
         $state = $request->input('state');
 
@@ -129,7 +127,6 @@ class ProfileController extends Controller
                     'phone' => $phone,
                     'is_complete' => true,
                     'gender' => $gender,
-                    'profession'=> $profession,
                     'home_address' => $home_address,
                     'state' => $state,
                     'image' => $new_filename

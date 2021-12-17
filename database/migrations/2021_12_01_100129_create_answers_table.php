@@ -15,10 +15,10 @@ class CreateAnswersTable extends Migration
     {
         Schema::create('answers', function (Blueprint $table) {
             $table->id();
-            $table->integer('company_id')->nullable();
+            // $table->integer('company_id')->nullable();
             $table->integer('user_id')->nullable();
-            $table->integer('application_code')->nullable();
-            $table->string('audio')->nullable();
+            $table->string('application_code')->nullable();
+            // $table->string('audio')->nullable();
             $table->string('video')->nullable();
             $table->boolean('status')->default(true);
             $table->timestamps();

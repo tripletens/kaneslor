@@ -14,7 +14,7 @@
 
     <div class="row">
         <div class="col-md-6 my-3">
-            <div class="card">
+            <div class="card d-flex mx-auto justify-content-center">
                 <div class="card-body shadow">
                     <!-- {{ $user }} -->
                     <table class="table table-responsive">
@@ -39,7 +39,7 @@
                             <th> Gender : </th>
                             <td> {{ ucwords($user->gender) }}</td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <th> Profession : </th>
                             <td> @if($user->profession == 'eho') 
                                     <span class='badge badge-success'>EHO</span> 
@@ -48,14 +48,14 @@
                                 @else Student
                                 @endif
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <th> Phone : </th>
                             <td> {{ $user->phone ? ucwords($user->phone) : "Not Available" }}</td>
                         </tr>
                         <tr>
                             <th> Date Registered : </th>
-                            <td> {{ $user->created_at ? $user->created_at : "Not Available" }}</td>
+                            <td> {{ $user->created_at ? niceday($user->created_at) : "Not Available" }}</td>
                         </tr>
                     </table>
                 </div>
@@ -123,32 +123,6 @@
                                 @enderror
                             </div>
                             <div class="col-sm-6">
-                                <label for="profession">Profession:</label>
-                                <select class="form-control form-control-user @error('profession') is-invalid @enderror" name="profession" value="{{ old('profession') }}" required autocomplete="profession" autofocusid="exampleFirstprofession" placeholder="profession">
-                                    <option name="profession[]" value="">-- Select a profession --</option>
-                                    <option name="profession[]" @if($user->profession == 'eho') selected @endif value="eho">EHO</option>
-                                    <option name="profession[]" @if($user->profession == 'non_eho') selected @endif value="non_eho">Non EHO</option>
-                                    <option name="profession[]" @if($user->profession == 'student') selected @endif value="student">Student</option>
-                                </select>
-                                @error('profession')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                                <!--  home address , state -->
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                                <label for="home_address">Home Address:</label>
-                                <textarea class="form-control form-control-user @error('home_address') is-invalid @enderror" name="home_address" value="{{ old('home_address') }}" required autocomplete="home_address" autofocusid="exampleFirsthome_address" placeholder="Home Address">{{$user->home_address}}</textarea>
-                                @error('home_address')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                            <div class="col-sm-6">
                                 <label for="state">State of Residence:</label>
                                 <select type="search" class="form-control form-control-user @error('state') is-invalid @enderror" name="state" value="{{ old('state') }}" required autocomplete="state" autofocusid="exampleFirststate" placeholder="State of Residence">
                                     <option name="state[]" value="">-- Select a state of origin --</option>
@@ -166,6 +140,17 @@
                                 </span>
                                 @enderror
                                 <!--  home address , state -->
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12 mb-3 mb-sm-0">
+                                <label for="home_address">Home Address:</label>
+                                <textarea class="form-control form-control-user @error('home_address') is-invalid @enderror" name="home_address" value="{{ old('home_address') }}" required autocomplete="home_address" autofocusid="exampleFirsthome_address" placeholder="Home Address">{{$user->home_address}}</textarea>
+                                @error('home_address')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                         </div>
                         <button class="btn bg-gradient-success text-white" type="submit">Save Details</button>

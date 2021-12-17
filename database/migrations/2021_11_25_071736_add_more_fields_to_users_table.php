@@ -15,12 +15,12 @@ class AddMoreFieldsToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             // add profession , home address , state , status, is_complete, image , gender
-            $table->string('profession')->nullable();
+            // $table->string('profession')->nullable();
             $table->longText('home_address')->nullable();
             $table->string('state')->nullable();
             $table->string('gender')->nullable();
             $table->boolean('status')->nullable();
-            $table->boolean('is_complete')->default(false);
+            // $table->boolean('is_complete')->default(false);
             $table->string('image')->default('undraw_profile.svg');
         });
     }

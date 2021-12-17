@@ -43,7 +43,7 @@
                                     <span class="badge badge-info">Pending</span>
                                     @endif
                                 </td>
-                                <td>{{date( $application->created_at)}}</td>
+                                <td>{{niceday( $application->created_at)}}</td>
                                 <th>
                                     <div class="btn-group" role="group" aria-label="Basic outlined example">
                                         <a href="{{route('view-one-application',$application->code)}}" title="View Application Details">
@@ -54,8 +54,8 @@
                                                 </svg>
                                             </button>
                                         </a>
-                                        <a href="{{route('view_job_tests', $application->category)}}">
-                                            <button type="button" class="btn btn-sm btn-primary mx-2">View Test</button>
+                                        <a href="{{route('view_job_tests', $application->code)}}">
+                                            <button type="button" title="Sorry you can only take the test once " class="btn btn-sm btn-primary mx-2" @if(has_done_test($application->code)) {{'disabled'}} @endif>View Test</button>
                                         </a>
 
                                         <!-- <button type="button" class="btn btn-outline-primary">Right</button> -->

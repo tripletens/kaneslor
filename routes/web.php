@@ -33,7 +33,8 @@ Route::prefix('dashboard')->group(function () {
         // 
         // fetch_job_test
         Route::get('/job-application/{code}', [App\Http\Controllers\JobsController::class, 'view_one_application'])->name('view-one-application');
-        Route::get('/view-test/{category_id}',[App\Http\Controllers\JobsController::class, 'fetch_job_test'])->name('view_job_tests');
+        Route::get('/view-test/{application_code}',[App\Http\Controllers\JobsController::class, 'fetch_job_test'])->name('view_job_tests');
+        Route::post('/submit-test',[App\Http\Controllers\JobsController::class, 'process_test'])->name('process_job_tests');
     });
 
     Route::prefix('users')->group(function () {

@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Answers extends Model
 {
     use HasFactory;
+    public $fillable = [
+        'user_id', 'application_code', 'audio', 'video', 'status',
+    ];
 }

@@ -144,6 +144,55 @@
             </div>
         </div>
     </div>
+    <br/><br/>
+    <hr>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-lg-6">
+            <div class="card my-5">
+                <div class="card-body">
+                    <h3 class="text-center mt-0 mb-4">
+                        Interview Questions
+                    </h3>
+                    <table class="table table-responsive table-striped">
+                            @if(count($questions) > 0)
+                                @foreach($questions as $key => $question)
+                                <tr colspan="4">
+                                    <th>{{$key+1}}. </td>
+                                    <th>{{$question->title}}</th>
+                                </tr>
+                                @endforeach
+                            @else
+                                <span class="d-flex justify-content-center text-center ">
+                                    No Video Uploaded Yet
+                                </span>
+                            @endif
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-6">
+            
+            <div class="card my-5">
+                <div class="card-body">
+                    <h3 class="text-center mt-0 mb-4">
+                        Interview Answers
+                    </h3>
+                    <table class="table table-responsive table-striped">
+                            @if(count($answers) > 0)
+                                @foreach($answers as $key => $answer)
+                                <tr colspan="4">
+                                    <th>{{$key+1}}. </td>
+                                    <th><a href="{{Storage::url('videos/' . $answer->video)}}" download>Download Video</a></th>
+                                </tr>
+                                @endforeach
+                            @else
+                                <span class="d-flex justify-content-center text-center"> No Video Uploaded Yet</span>
+                            @endif
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- /.container-fluid -->
 

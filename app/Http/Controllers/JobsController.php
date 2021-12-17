@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Applications;
 use App\Models\Category;
 use App\Models\Question;
+use App\Models\Answers;
 use Illuminate\Http\Request;
 use Laravel\Ui\Presets\React;
 use Illuminate\Support\Facades\Validator;
@@ -93,13 +94,14 @@ class JobsController extends Controller
         $user_id = Auth('web')->user()->id;
 
         $get_jobs = DB::table('applications')->where('applications.user_id',$user_id)->join('categories', 'applications.category', '=', 'categories.id')
-        ->select('applications.*', 'categories.name as category_name')->get();
+        ->select('applications.*','categories.name as category_name')->get();
 
         // echo dd($get_jobs); exit();
 
         $data = [
             "applications" => $get_jobs
         ];
+        
         return view('dashboard.jobs.view')->with($data);
     }
 
@@ -107,28 +109,103 @@ class JobsController extends Controller
         
         // dd($code);
         $job_application = DB::table('applications')->where("applications.code",$code)->join('categories', 'applications.id', '=', 'categories.id')
-        ->select('applications.*', 'categories.name as category_name')->get();;
+        ->select('applications.*', 'categories.name as category_name')->get();
         
-        // echo dd($job_application);
+        $answers = DB::table('answers')->where("answers.application_code",$code)->select('answers.*')->get();
+        
+        if(count($job_application) > 0 ){
+            $category_id = $job_application[0]->category;
+            $questions = Question::where('category_id',$category_id)->where('status','1')->get();
+        };
+
+        
         if(count($job_application) == 0){
             toastr()->error("Invalid Job Application Code Provided");
             return redirect()->route('view-applications');
         }
 
+        // echo dd($questions);
+
         $data = [
-            'job_application' => $job_application
+            'job_application' => $job_application,
+            'answers' => $answers,
+            'questions' => $questions ? $questions : []
         ];
 
         return view('dashboard.jobs.view-one')->with($data);
     }
 
-    public function fetch_job_test($category_id){
-        $tests = Question::where('category_id',$category_id)->get();
-
-        $data = [
-            'tests' => $tests
-        ];
-
+    public function fetch_job_test($application_code){
+        $get_application_details = Applications::where('code',$application_code)->where('status','!=', '0')->get();
+        
+        if(count($get_application_details) > 0){
+            $category_id = $get_application_details[0]['category'];
+            $tests = Question::where('category_id',$category_id)->where('status','1')->get();
+            $data = [
+                'tests' => $tests,
+                'application' => $get_application_details
+            ];
+        }else{
+            toastr()->error("Invalid Application Code");
+            return back();
+        }
+        
+        // dd($get_application_details);
+        
         return view('dashboard.jobs.view-test')->with($data);
+    }
+
+    public function process_test(Request $request){
+        // dd($request);
+        $max_size = 5000000;
+        $category_id = $request->input('category_id');
+        $application_code = $request->input('application_code');
+        $user_id = Auth('web')->user()->id;
+
+        // dd($request->files);
+        for($i = 0; $i < count($request->files); $i++){
+            $file = $request->file('question' . $i);
+            $file_size = $request->file('question' . $i)->getSize();
+            $file_mime_type = $request->file('question' . $i)->getClientOriginalExtension();
+            $file_name = $request->file('question' . $i)->getClientOriginalName();
+
+            if(!$file->isValid()){
+                toastr()->error("Only Valid Video Files are allowed");
+                return back();
+            }
+
+            if($file_size > $max_size){
+                toastr()->error("Only file sizes of 5mb Maximum are allowed");
+                return back();
+            }
+
+            // echo $file_mime_type; exit();
+
+            if($file_mime_type != 'mp4'){
+                toastr()->error("Only Mp4 and Avi Video formats are allowed");
+                return back();
+            }
+ 
+            $path = $file->storeAs(
+                'storage/public/videos', $file_name
+            );
+
+            if($path){
+                // saved successfully 
+                // then we save to the database
+                $save_answers = Answers::create([
+                    'user_id' => $user_id, 
+                    'application_code' => $application_code,
+                    'video' => $file_name,
+                    'question_id'=>''
+                ]);
+            }else{
+                toastr()->error("Sorry! Test Questions could not be submitted. Try again later ");
+                return back();
+            }
+
+            toastr()->success("Test Answers successfully Uploaded");
+            return redirect()->route('view-one-application',$application_code);
+        }
     }
 }
