@@ -41,6 +41,10 @@ Route::prefix('dashboard')->group(function () {
         Route::get('/payments', [App\Http\Controllers\PaymentController::class, 'fetch_my_payments'])->name('my_payments');
     });
 
+    Route::prefix('interviews')->group(function () {
+        Route::get('/view-all', [App\Http\Controllers\InterviewController::class, 'fetch_all_interviews'])->name('all-interviews');
+    });
+
     Route::prefix('profile')->group(function () {
         Route::get('/view', [App\Http\Controllers\ProfileController::class, 'fetch_user_details'])->name('view-profile');
         Route::post('/update', [App\Http\Controllers\ProfileController::class, 'update_profile'])->name('update-profile');

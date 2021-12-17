@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Applications;
+use App\Models\Question;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\JobApplicationRejected;
 use App\Mail\JobApplicationAccepted;
@@ -36,8 +37,17 @@ class JobController extends Controller
             return redirect()->route('admin.job_applications');
         }
 
+        $answers = DB::table('answers')->where("answers.application_code",$code)->select('answers.*')->get();
+        
+        if(count($job_application) > 0 ){
+            $category_id = $job_application[0]->category;
+            $questions = Question::where('category_id',$category_id)->where('status','1')->get();
+        };
+
         $data = [
-            'job_application' => $job_application
+            'job_application' => $job_application,
+            'questions' => $questions,
+            'answers' => $answers
         ];
 
         return view('admin.jobs.view-one')->with($data);
