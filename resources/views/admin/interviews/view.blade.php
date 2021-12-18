@@ -51,7 +51,7 @@
                                 </tr>
                                 <tr>
                                     <td>Date Created<td>
-                                    <td>{{niceday1($interview->created_at)}}<td>
+                                    <td>{{niceday($interview->created_at)}}<td>
                                 </tr>
                                 <tr>
                                     <td>Status <td>
