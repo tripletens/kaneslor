@@ -20,4 +20,13 @@
             return date_format($date, "F jS Y, h:i a");
         }
     }
+
+    if (! function_exists('niceday1')) {
+        function niceday1($d)
+        {
+            $sp = str_replace(' ', '', $d);
+            $date = date_create($sp);
+            return date_format($date, "F jS Y");
+        }
+    }
 ?>

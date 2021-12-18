@@ -14,10 +14,14 @@
         <h1 class="h3 mb-0 text-gray-800">View Jobs Application Details</h1>
         <div class="btn-group" role="group" aria-label="Basic outlined example">
             <a class="btn btn-primary text-white hover-primary" style="text-decoration: none;" href="{{route('admin.job_applications')}}">View all Applications</a>
-
+        
             <a class="btn btn-success text-white" data-toggle="modal" data-target="#ApprovecategryModal" style="text-decoration: none;" >Approve </a>
 
             <a class="btn btn-danger text-white" data-toggle="modal" data-target="#rejectapplicationModal" style="text-decoration: none;" >Reject </a>
+            
+            @if($job_application[0]->status == '1')
+                <a class="btn btn-dark text-white" data-toggle="modal" data-target="#setInterviewModal" style="text-decoration: none;" >Setup Interview </a>
+            @endif
         </div>
        
         
@@ -39,6 +43,67 @@
                         <form method="POST" action="{{route('admin.approve_job_applications',$job_application[0]->id)}}">
                             @csrf
                             <button class="btn bg-success text-white" type="submit">Yes! Approve</button>
+                        </form>
+                    </div>
+                    <!-- </form> -->
+                </div>
+            </div>
+        </div> 
+
+        <div class="modal fade" id="setInterviewModal" tabindex="-1" role="dialog" aria-labelledby="setInterviewModal"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="setInterviewModal">Setup Interview for {{$job_application[0]->name}} </h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="POST" action="{{route('admin.save-interview')}}">
+                            @csrf
+                            <!-- `title`, `application_code`, `type`, `link`, `address`, `time`, `date`, -->
+                            <input type="hidden" class="form-control" name="name" value="{{$job_application[0]->name}}"/>
+                            <input type="hidden" class="form-control" name="email" value="{{$job_application[0]->email}}"/>
+                            <div class="form-group">
+                                <label for="title"> Title: </label>
+                                <input type="text" class="form-control" name="title" placeholder="Enter Interview Title"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="application_code"> Application Code : </label>
+                                <input type="hidden" class="form-control" name="application_code" value="{{$job_application[0]->code}}"/>
+                                <input type="text" class="form-control" disabled name="application_code" value="{{$job_application[0]->code}}"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="type"> Type : </label>
+                                <select name="type" id="interview_type" class="form-control">
+                                    <option name="type[]" value="">-- Select an Interview Type--</option>
+                                    <option name="type[]" value="virtual"> Virtual Meeting</option>
+                                    <option name="type[]" value="in-person">In-Person Meeting</option>
+                                </select>
+                            </div>
+                            <div class="form-group"  id="address_div">
+                                <label for="address"> Address: </label>
+                                <textarea class="form-control" name="interview_address" placeholder="Enter Interview Address"></textarea>
+                            </div>
+                            <div class="form-group" id="link_div">
+                                <label for="link"> Meeting Link i.e Google Meet, Zoom etc : </label>
+                                <textarea class="form-control" name="meeting_link" placeholder="Enter Interview Meeting link"></textarea>
+                            </div>
+                            <div class="form-group" >
+                                <label for="time"> Time: </label>
+                                <input type="time" name="time" class="form-control" placeholder="Enter the time for the interview"/>
+                            </div>
+                            <div class="form-group" >
+                                <label for="date"> Date: </label>
+                                <input type="date" name="date" class="form-control" placeholder="Enter the date for the interview"/>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+                            <button class="btn bg-success text-white"  type="submit">Yes! Approve</button>
                         </form>
                     </div>
                     <!-- </form> -->
@@ -75,36 +140,12 @@
                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
     </div>
 
-     <!-- +"user_id": 1 -->
-                        <!-- +"code": "KAN-kMSwf228"
-                    +"name": "test"
-                    +"email": "tripletens.kc@gmail.com"
-                    +"position": "teacher"
-                    +"category": "16"
-                    +"dob": "2021-12-08"
-                    +"phone": "09038883483483"
-                    +"altphone": "0949394394093"
-                    +"nokphone": "094909043904903904"
-                    +"gender": "male"
-                    +"marital_status": "single"
-                    +"social_media": "linkedin"
-                    +"salary": "900000"
-                    +"address": "esiri crescent"
-                    +"history": "aladdin"
-                    +"qualification": "bsc csc"
-                    +"certification": "ican"
-                    +"qualified": null
-                    +"referees": "Mr Okafor"
-                    +"status": 2
-                    +"created_at": "2021-12-07 20:59:52"
-                    +"updated_at": "2021-12-07 20:59:52"
-                    +"category_name": "PHARMACISTS" -->
     <div class="row">
         <div class="col-md-6 col-xs-12 col-lg-6">
             <div class="card ">
                 <h4 class="card-title p-4 mb-0 pb-0 text-center">Full Application Details</h4>
                 <div class="card-body">
-                    <table class="table table-striped">
+                    <table class="table table-responsive table-striped">
                         <tr>
                             <th>Application Code</th>
                             <td><button disabled class="btn btn-sm btn-danger">{{ucwords($job_application[0]->code)}}</button></td>
@@ -154,7 +195,7 @@
             <div class="card ">
                 <!-- <h4 class="card-title p-4 mb-0 pb-0 text-center">View Job Application Details</h4> -->
                 <div class="card-body">
-                    <table class="table table-striped">
+                    <table class="table table-responsive table-striped">
                         <!-- <tr>
                             <th></th>
                             <td></td>
@@ -259,5 +300,7 @@
     </div>
 </div>
 <!-- /.container-fluid -->
+@push('head')
 
+@endpush
 @endsection

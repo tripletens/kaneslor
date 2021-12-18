@@ -93,7 +93,6 @@ Route::prefix('/admin')->name('admin.')->namespace('App\Http\Controllers\Admin')
         Route::post('/reject/{id}','JobController@reject')->name('reject_job_applications');
         
     });
-
     Route::prefix('/category')->middleware('guard.verified:admin,admin.verification.notice')->group(function () {
         Route::get('/view','CategoryController@view_all')->name('view-category');
         Route::post('/add','CategoryController@add_category')->name('add-category');
@@ -105,6 +104,11 @@ Route::prefix('/admin')->name('admin.')->namespace('App\Http\Controllers\Admin')
         Route::post('/add','QuestionController@store')->name('add-question');
         Route::post('/update/{id}','QuestionController@update')->name('update-question');
         Route::post('/delete/{id}','QuestionController@destroy')->name('delete-question');
+    });
+    Route::prefix('interviews')->group(function () {
+        Route::get('/view-all', 'InterviewController@fetch_all_interviews')->name('all-interviews');
+        Route::post('/save', 'InterviewController@save_interview')->name('save-interview');
+        Route::post('/delete/{id}', 'InterviewController@delete_interview')->name('delete-interview');
     });
 });
 

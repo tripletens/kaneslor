@@ -24,6 +24,7 @@
     
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
+    @stack('head')
     @toastr_css
 </head>
 
@@ -122,6 +123,29 @@
             $('#category_table').DataTable();
             $('#question_table').DataTable();
             $('#view_jobs_application').DataTable();
+            
+            $('#address_div').css("display","none");
+            $('#link_div').css("display","none");
+
+            $('#interview_type').change(function(){
+                if(this.value == 'virtual'){
+                    $('#link_div').show();
+                    $('#link_div').attr('required',"true");
+
+                    $('#address_div').css("display","none");
+
+                }else if(this.value == 'in-person'){
+                    $('#address_div').css("display","block");
+
+                    $('#address_div').attr('required',"true");
+                    $('#link_div').css("display","none");
+                }else{
+                    $('#address_div').css("display","none");
+                    $('#link_div').css("display","none");
+                    // $('#address_div').hide(); 
+                    // $('#link_div').hide();
+                }
+            });
         });
     </script>
 </body>

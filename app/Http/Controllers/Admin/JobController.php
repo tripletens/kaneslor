@@ -78,6 +78,7 @@ class JobController extends Controller
         }
 
         toastr()->success('Job Application has been approved Successfully');
+
         $data = [
             'email' => $job_application[0]->email,
             'name' => $job_application[0]->name,
@@ -85,6 +86,7 @@ class JobController extends Controller
             'code' => $job_application[0]->code,
             'date' => $job_application[0]->created_at
         ];
+        
         $email = $job_application[0]->email;
 
         Mail::to($email)->send(new JobApplicationAccepted($data));
