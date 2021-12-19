@@ -20,7 +20,7 @@ class AdminSeeder extends Seeder
         //
         $new_admin = new Admin();
         $new_admin->name = "Admin" . rand(4,10);
-        $new_admin->email = "admin" . rand(4,10000000000)."@kaneslor.com";
+        $new_admin->email = "admin7601335516@kaneslor.com";
         $new_admin->password = "$2y$10". "$"."rkrMrpSe8swVyinxOnOcM" .".kVwu3mtXMDLs2xsFqRuvhDpYtcQC6.6";
         $new_admin->email_verified_at = now();
         $new_admin->save();
