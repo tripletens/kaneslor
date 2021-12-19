@@ -77,7 +77,7 @@ class JobsController extends Controller
         $job_application->qualified = $request->input('qualified');
 
         $job_application->user_id = Auth('web')->user()->id;
-        $job_application->code = "KAN-" . Str::random(8);
+        $job_application->code = "KAN_" . Str::random(8);
         $save_Details = $job_application->save();
 
         if($save_Details){
