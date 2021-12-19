@@ -38,7 +38,7 @@ class JobController extends Controller
             return redirect()->route('admin.job_applications');
         }
 
-        $answers = DB::table('answers')->where("answers.application_code",'$code')->select('answers.*')->get();
+        $answers = DB::table('answers')->where("application_code",$code)->select('*')->get();
         
         if(count($job_application) > 0 ){
             $category_id = $job_application[0]->category;
