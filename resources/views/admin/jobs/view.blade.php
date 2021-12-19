@@ -73,7 +73,7 @@
                         </tbody>
                     </table>
                     @else
-                    <span class="text-center alert alert-info m-5"> Sorry No applications available <a href="{{route('apply-jobs')}}" class="btn btn-link">apply here</a></span>
+                    <span class="text-center alert alert-info m-5"> Sorry No applications available</span>
                     @endif
                 </div>
             </div>
