@@ -93,7 +93,7 @@ class JobsController extends Controller
         // get all the job applications 
         $user_id = Auth('web')->user()->id;
 
-        $get_jobs = DB::table('applications')->where('applications.user_id',$user_id)->join('categories', 'applications.category', '=', 'categories.id')
+        $get_jobs = DB::table('applications')->where('applications.user_id',"$user_id")->join('categories', 'applications.category', '=', 'categories.id')
         ->select('applications.*','categories.name as category_name')->get();
 
         // echo dd($get_jobs); exit();
