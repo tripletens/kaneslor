@@ -46,7 +46,7 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'server275.web-hosting.com'),
+            'host' => env('DB_HOST', '199.188.201.77'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'travlmbm_kaneslor'),
             'username' => env('DB_USERNAME', 'travlmbm_kaneslor'),
