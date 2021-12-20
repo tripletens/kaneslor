@@ -73,7 +73,7 @@
                         </tbody>
                     </table>
                     @else
-                    <span class="text-center alert alert-info m-5"> Sorry No applications available</span>
+                    <span class="text-center alert alert-info m-5 d-flex justify-content-center"> Sorry No applications available</span>
                     @endif
                 </div>
             </div>
