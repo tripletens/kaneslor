@@ -73,7 +73,11 @@
                         </tbody>
                     </table>
                     @else
-                    <span class="text-center alert alert-info m-5 d-flex justify-content-center"> Sorry No applications available</span>
+                    <div class="col-md-12 col-xs-12 col-lg-12">
+                        <div class="d-flex card justify-content-center">
+                            <span class="text-center alert alert-info m-5"> Sorry no Applications Available</span>
+                        </div>
+                    </div>
                     @endif
                 </div>
             </div>
