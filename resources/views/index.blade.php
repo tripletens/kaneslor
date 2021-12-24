@@ -43,7 +43,7 @@
                     <div class="col-md-12">
                         <div class="section-heading">
                             <span>Why Choose us</span>
-                            <h2> We Provide Jobs to over 200 million Nigerians</h2>
+                            <h2> We Provide Jobs to over 10 million Nigerians</h2>
                         </div>
                     </div> 
                 </div> 
@@ -102,6 +102,6 @@
         </section>
 
         @include('const.landing-testimonials')
-        @include('const.landing-blog-posts')
+        @include('const.landing-map')
     </main>
 @endsection

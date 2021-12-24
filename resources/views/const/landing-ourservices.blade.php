@@ -24,8 +24,8 @@
             <div class="col-md-7" style="background-image:url({{asset('images/kaneslor_icon.png')}}); background-size:50%;background-repeat: no-repeat;background-position: center;">
                 <div class="left-content" >
                     <br>
-                    <h3>WELCOME TO KANSELOR VACANCY <br /> 
-                    </h3>
+                    <h1>WELCOME TO KANSELOR VACANCY <br /> 
+                    </h1>
                     <p>
                         <!-- where Jobs are created for unemployed graduates and Businesses are made more profitable for Nigerian business owner -->
                         At KANSELOR we work with Business owners to create jobs for unemployed graduates and we prepare unemployed Nigerian graduates to make businesses more profitable when business owners employ them

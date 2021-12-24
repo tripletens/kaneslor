@@ -18,13 +18,19 @@
                                     <ul class="sub-menu">
                                         <li><a href="{{route('about-page')}}">About Us</a></li>
                                         <li><a href="{{route('team-page')}}">Team</a></li>
-                                        <li><a href="{{route('blog-page')}}">Blog</a></li>
+                                        <!-- <li><a href="{{route('blog-page')}}">Blog</a></li> -->
                                         <li><a href="{{route('testimonials-page')}}">Testimonials</a></li>
                                         <li><a href="{{route('terms-page')}}">Terms</a></li>
                                     </ul>
                                 </li>
 
                                 <li><a href="{{route('contact-page')}}">Contact Us</a></li>
+
+                                <li>
+                                    <a href="{{route('login')}}">
+                                        <button class="btn btn-lg btn-outline-danger"> Login</button>
+                                    </a>
+                                </li>
                             </ul>
                         </nav><!-- / #primary-nav -->
                     </div>
