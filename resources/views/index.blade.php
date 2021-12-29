@@ -9,7 +9,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="banner-caption">
                         <div class="line-dec"></div>
-                        <h2>Easy Access to Jobs </h2>
+                        <h2 style="font-weight:bolder;">PICK YOUR DREAM JOB AND KIYIX FIND IT FOR YOU </h2>
                         <div class="row" style="width:50%;">
                             <div class="col-md-6">
                                 <div class="blue-button">
