@@ -3,7 +3,7 @@
 
 @section('content')
           
-<section class="banner" id="top" style="background-image: url(img/kanselor.jfif);">
+<section class="banner" id="top" style="background-image: url({{asset('img/Kanselor.jfif')}});">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
