@@ -44,7 +44,7 @@
                         <div class="footer-heading">
                             <h4>Contact Information</h4>
                         </div>
-                        <p><i class="fa fa-map-marker"></i> Lakeview Estate, Amuwo Odofin, Lagos, Nigeria</p>
+                        <p><i class="fa fa-map-marker"></i> Kanselor University Campus, Lakeview Estate, Phase two 101015, Lagos</p>
                         <ul>
                             <li><span>Phone:</span><a href="tel:+2348023622171">+234 802 362 2171</a></li>
                             <li><span>Email:</span><a href="mailto:admin@kaneslor.com">admin@kaneslor.com</a></li>
