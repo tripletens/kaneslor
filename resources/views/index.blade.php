@@ -3,7 +3,7 @@
 
 @section('content')
           
-<section class="banner" id="top" style="background-image: url(img/homepage-banner-image-1920x700.jpg);">
+<section class="banner" id="top" style="background-image: url(img/kanselor.jfif);">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
@@ -50,11 +50,11 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="featured-item">
-                            <div class="down-content">
+                            <div class="down-content"  style="height:200px;">
 
-                                <h3 class="text-center my-3 mx-5">Employers </h3>
+                                <h2 class="text-center my-3 mx-5">Employers </h2>
 
-                                <p class="text-center">As an Employer we provide the link to job applicants on the go</p>
+                                <p class="text-center">As an employer, we provide you with immediate access to top-quality candidates</p>
 
                                 <div class="blue-button" style="margin-bottom:10px;display:flex; flex-direction:row; align:center;justify-content:center;">
                                     <a href="{{route('register')}}">Get Started</a>
@@ -65,14 +65,14 @@
                     </div>
 
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="featured-item">
+                        <div class="featured-item" >
 
-                            <div class="down-content">
-                                <h3 class="text-center my-3">Job Seeker</h3>
+                            <div class="down-content" style="height:200px;">
+                                <h2 class="text-center my-3">Job Seeker</h2>
 
-                                <p class="text-center">We make it easier to get jobs that suits you</p>
+                                <p class="text-center mt-4">We make it easier to get jobs that suits you</p>
 
-                                <div class="blue-button" style="margin-bottom:10px;display:flex; flex-direction:row; align:center;justify-content:center;">
+                                <div class="blue-button mt-5" style="margin-bottom:10px;display:flex; flex-direction:row; align:center;justify-content:center;">
                                     <a href="{{route('register')}}">Get Started</a>
                                 </div>
                                 <br/>
@@ -100,6 +100,8 @@
                 </div>
             </div>
         </section>
+
+        @include('const.landing-counter')
 
         @include('const.landing-testimonials')
         @include('const.landing-map')

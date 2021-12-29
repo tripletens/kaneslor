@@ -11,7 +11,7 @@
                             <ul class="dropdown menu">
                                 <li class='active'><a href="{{route('landing-page')}}">Home</a></li>
 
-                                <li><a href="{{route('jobs-page')}}">Jobs</a></li>
+                                <!-- <li><a href="{{route('jobs-page')}}">Jobs</a></li> -->
 
                                 <li>
                                     <a href="#">About</a>
@@ -28,7 +28,7 @@
 
                                 <li>
                                     <a href="{{route('login')}}">
-                                        <button class="btn btn-lg btn-outline-danger"> Login</button>
+                                        <button class="btn btn-lg btn-outline-danger" style="height:50px; width:100px; font-size:medium;background:#F60E0F;color:#fff;"> Login</button>
                                     </a>
                                 </li>
                             </ul>
