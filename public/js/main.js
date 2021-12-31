@@ -305,11 +305,6 @@ jQuery(document).ready(function ($) {
     };
   });
 
-  jQuery(function ($) {
-    $('#primary-nav').responsivenav();
-    $('#top-nav').responsivenav({ responsive: false });
-  });
-
   // for the counter 
   $(function () {
     var counters = $('.counter-no');
@@ -334,4 +329,11 @@ jQuery(document).ready(function ($) {
       count(0, counter[j], j);
     }
   });
+
+  jQuery(function ($) {
+    $('#primary-nav').responsivenav();
+    $('#top-nav').responsivenav({ responsive: false });
+  });
+
+  
 });
