@@ -313,6 +313,29 @@ jQuery(document).ready(function ($) {
   });
 
 
-  
+   // for the counter 
+   $(function () {
+    var counters = $('.counter-no');
+    var counter_quantity = counters.length;
+    var counter = [];
+
+    for ( var i = 0; i < counter_quantity; i++) {
+      counter[i] = parseInt(counters[i].innerHTML); 
+    }
+
+    var count = function (start, value, id) {
+      var localStart = start;
+      setInterval(function () {
+        if (localStart < value) {
+          localStart++;
+          counters[id].innerHTML = localStart;
+        }
+      }, 1);
+    }
+
+    for ( var j = 0; j < counter_quantity; j++) {
+      count(0, counter[j], j);
+    }
+  });
   
 });
