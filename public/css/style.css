@@ -1327,10 +1327,6 @@ main > section {
   background: #fff;  
 }
   
-main > section:nth-child(even) { 
-  background: #f8f8f8; 
-}
-
 .counter-no {
   width: 150px;
   height: 150px;
@@ -1351,5 +1347,11 @@ main > section:nth-child(even) {
   -moz-box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
 }
+
+main > section:nth-child(even) { 
+  background: #f8f8f8; 
+}
+
+
 
 
